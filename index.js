@@ -229,9 +229,9 @@ var buyerData = {
     {
       fillColor: "transparent",
       strokeColor: "#1d5470",
-      pointColor: "#fff",
+      pointColor: "#49adb2",
       pointStrokeColor: "#49adb2",
-      data: [90, 89, 85, 90, 90, 77, 75, 67],
+      data: [90, 89, 85, 90, 100, 77, 75, 67],
     },
   ],
 };
@@ -239,27 +239,3 @@ var buyerData = {
 var buyers = document.getElementById("buyers").getContext("2d");
 // draw line chart
 new Chart(buyers).Line(buyerData);
-// pie chart data
-var pieData = [
-  {
-    value: 20,
-    color: "#878BB6",
-  },
-  {
-    value: 40,
-    color: "#4ACAB4",
-  },
-  {
-    value: 10,
-    color: "#FF8153",
-  },
-  {
-    value: 30,
-    color: "#FFEA88",
-  },
-];
-// pie chart options
-var pieOptions = {
-  segmentShowStroke: false,
-  animateScale: true,
-};
