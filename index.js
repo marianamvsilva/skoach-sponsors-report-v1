@@ -1,3 +1,4 @@
+//Donut Chart
 var Dial = function (container) {
   this.container = container;
   this.size = this.container.dataset.size;
@@ -217,3 +218,48 @@ var dial = new Dial(containers[0]);
 var dial2 = new Dial(containers[1]);
 dial.animateStart();
 dial2.animateStart();
+
+//
+// LINE CHART
+//
+// line chart data
+var buyerData = {
+  labels: ["Jan 1", "Jan 8", "Jan 15", "Jan 22", "Feb 5", "Feb 12", "Feb 19"],
+  datasets: [
+    {
+      fillColor: "transparent",
+      strokeColor: "#1d5470",
+      pointColor: "#fff",
+      pointStrokeColor: "#49adb2",
+      data: [90, 89, 85, 90, 90, 77, 75, 67],
+    },
+  ],
+};
+// get line chart canvas
+var buyers = document.getElementById("buyers").getContext("2d");
+// draw line chart
+new Chart(buyers).Line(buyerData);
+// pie chart data
+var pieData = [
+  {
+    value: 20,
+    color: "#878BB6",
+  },
+  {
+    value: 40,
+    color: "#4ACAB4",
+  },
+  {
+    value: 10,
+    color: "#FF8153",
+  },
+  {
+    value: 30,
+    color: "#FFEA88",
+  },
+];
+// pie chart options
+var pieOptions = {
+  segmentShowStroke: false,
+  animateScale: true,
+};
