@@ -1,0 +1,26 @@
+body {
+  background-color: #ebeeee;
+}
+
+.container {
+  margin-top: 5% !important;
+}
+
+h1 {
+  font-size: 2.8rem !important;
+  color: black;
+  font-weight: 600 !important;
+}
+
+h4 {
+  color: #1d5470;
+  margin-bottom: 0 !important;
+}
+
+.logo {
+  max-width: 15%;
+}
+
+.column-logo {
+  text-align: right;
+}
