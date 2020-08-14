@@ -109,17 +109,39 @@
           </div>
         </div>
         <!-- LINECHART STARTS HERE -->
-        <div class="card card-margin-top">
-          <div class="wrapper-line">
-            <canvas id="myChart" width="600" height="400"></canvas>
+        <div class="row">
+          <div class="column column-25">
+            <div class="card">
+              <div class="row">
+                <div class="column">
+                  <h3>Cumulative <br />Completion <br />Rate</h3>
+                </div>
+                <div class="column">
+                  <div
+                    class="container chart"
+                    data-size="100"
+                    data-value="75"
+                    data-arrow="up"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column column-70">
+            <div class="card card-margin-top">
+              <h2>Overall Challenge Completion Rate</h2>
+              <p>Completed Challenges / Total Users</p>
+            </div>
           </div>
         </div>
         <!-- TABLE STARTS HERE -->
         <div class="card card-margin-top">
+          <h2>Challenge Completion Rate by Team</h2>
+          <p>Completed Challenges / Total Users by Team</p>
           <table>
             <thead>
               <tr>
-                <th>Team</th>
+                <th class="td-padding-left">Team</th>
                 <th>Jan 1</th>
                 <th>Jan 8</th>
                 <th>Jan 15</th>
@@ -132,7 +154,7 @@
             </thead>
             <tbody>
               <tr class="team-hover">
-                <td>All teams</td>
+                <td class="td-padding-left">All teams</td>
                 <td>100%</td>
                 <td>100%</td>
                 <td>100%</td>
@@ -143,7 +165,7 @@
                 <td>100%</td>
               </tr>
               <tr class="team-hover">
-                <td>Marketing</td>
+                <td class="td-padding-left">Marketing</td>
                 <td>100%</td>
                 <td>100%</td>
                 <td>100%</td>
@@ -154,7 +176,7 @@
                 <td>100%</td>
               </tr>
               <tr class="team-hover">
-                <td>Engineering</td>
+                <td class="td-padding-left">Engineering</td>
                 <td>100%</td>
                 <td>100%</td>
                 <td>100%</td>
@@ -165,7 +187,7 @@
                 <td>100%</td>
               </tr>
               <tr class="team-hover">
-                <td>Sales</td>
+                <td class="td-padding-left">Sales</td>
                 <td>100%</td>
                 <td>100%</td>
                 <td>100%</td>
@@ -176,7 +198,7 @@
                 <td>100%</td>
               </tr>
               <tr class="team-hover">
-                <td>Customer Success</td>
+                <td class="td-padding-left">Customer Success</td>
                 <td>100%</td>
                 <td>100%</td>
                 <td>100%</td>
@@ -187,7 +209,7 @@
                 <td>100%</td>
               </tr>
               <tr class="team-hover">
-                <td>Product</td>
+                <td class="td-padding-left">Product</td>
                 <td>100%</td>
                 <td>100%</td>
                 <td>100%</td>
