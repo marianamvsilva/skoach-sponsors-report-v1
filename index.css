@@ -78,6 +78,9 @@ h4 {
   .form-control {
     max-width: 60%;
   }
+  .column-logo {
+    text-align: left;
+  }
 }
 
 .card {
@@ -132,4 +135,14 @@ h4 {
 .team-hover:hover {
   background-color: #49adb2;
   color: white;
+}
+
+.wrapper-line {
+  width: 60%;
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 60px 50px;
+  background: #fff;
+  border-radius: 4px;
 }

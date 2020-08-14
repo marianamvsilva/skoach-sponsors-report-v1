@@ -222,68 +222,62 @@ dial2.animateStart();
 //
 // LINE CHART
 //
-var config = {
+var ctx = document.getElementById("myChart").getContext("2d");
+
+var myChart = new Chart(ctx, {
   type: "line",
   data: {
-    labels: ["Jan 1", "Jan 8", "Jan 15", "Jan 22", "Feb 5", "Feb 12", "Feb 19"],
+    labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
     datasets: [
       {
-        label: "APAC RE Index",
-        backgroundColor: window.chartColors.red,
-        borderColor: window.chartColors.red,
+        label: "Data",
+        borderColor: "#80b6f4",
+        pointBorderColor: "#80b6f4",
+        pointBackgroundColor: "#80b6f4",
+        pointHoverBackgroundColor: "#80b6f4",
+        pointHoverBorderColor: "#80b6f4",
+        pointBorderWidth: 10,
+        pointHoverRadius: 10,
+        pointHoverBorderWidth: 1,
+        pointRadius: 3,
         fill: false,
-        data: [90, 89, 85, 90, 100, 77, 75, 67],
+        borderWidth: 4,
+        data: [100, 120, 150, 170, 180, 170, 160],
       },
     ],
   },
   options: {
-    responsive: true,
-    title: {
-      display: true,
-      text: "Chart.js Line Chart - Logarithmic",
+    legend: {
+      position: "bottom",
     },
     scales: {
-      xAxes: [
+      yAxes: [
         {
-          display: true,
-          scaleLabel: {
-            display: true,
-            labelString: "Date",
+          ticks: {
+            fontColor: "rgba(0,0,0,0.5)",
+            fontStyle: "bold",
+            beginAtZero: true,
+            maxTicksLimit: 5,
+            padding: 20,
+          },
+          gridLines: {
+            drawTicks: false,
+            display: false,
           },
         },
       ],
-      yAxes: [
+      xAxes: [
         {
-          display: true,
-          //type: 'logarithmic',
-          scaleLabel: {
-            display: true,
-            labelString: "Index Returns",
+          gridLines: {
+            zeroLineColor: "transparent",
           },
           ticks: {
-            min: 0,
-            max: 100,
-
-            // forces step size to be 5 units
-            stepSize: 20,
+            padding: 20,
+            fontColor: "rgba(0,0,0,0.5)",
+            fontStyle: "bold",
           },
         },
       ],
     },
   },
-};
-
-window.onload = function () {
-  var ctx = document.getElementById("lineChart").getContext("2d");
-  window.myLine = new Chart(ctx, config);
-};
-
-document.getElementById("randomizeData").addEventListener("click", function () {
-  config.data.datasets.forEach(function (dataset) {
-    dataset.data = dataset.data.map(function () {
-      return randomScalingFactor();
-    });
-  });
-
-  window.myLine.update();
 });
