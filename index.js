@@ -214,4 +214,6 @@ Dial.prototype.setValue = function (value) {
 
 var containers = document.getElementsByClassName("chart");
 var dial = new Dial(containers[0]);
+var dial2 = new Dial(containers[1]);
 dial.animateStart();
+dial2.animateStart();
