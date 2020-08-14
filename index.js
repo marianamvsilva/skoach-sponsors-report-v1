@@ -222,20 +222,68 @@ dial2.animateStart();
 //
 // LINE CHART
 //
-// line chart data
-var buyerData = {
-  labels: ["Jan 1", "Jan 8", "Jan 15", "Jan 22", "Feb 5", "Feb 12", "Feb 19"],
-  datasets: [
-    {
-      fillColor: "transparent",
-      strokeColor: "#1d5470",
-      pointColor: "#49adb2",
-      pointStrokeColor: "#49adb2",
-      data: [90, 89, 85, 90, 100, 77, 75, 67],
+var config = {
+  type: "line",
+  data: {
+    labels: ["Jan 1", "Jan 8", "Jan 15", "Jan 22", "Feb 5", "Feb 12", "Feb 19"],
+    datasets: [
+      {
+        label: "APAC RE Index",
+        backgroundColor: window.chartColors.red,
+        borderColor: window.chartColors.red,
+        fill: false,
+        data: [90, 89, 85, 90, 100, 77, 75, 67],
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    title: {
+      display: true,
+      text: "Chart.js Line Chart - Logarithmic",
     },
-  ],
+    scales: {
+      xAxes: [
+        {
+          display: true,
+          scaleLabel: {
+            display: true,
+            labelString: "Date",
+          },
+        },
+      ],
+      yAxes: [
+        {
+          display: true,
+          //type: 'logarithmic',
+          scaleLabel: {
+            display: true,
+            labelString: "Index Returns",
+          },
+          ticks: {
+            min: 0,
+            max: 100,
+
+            // forces step size to be 5 units
+            stepSize: 20,
+          },
+        },
+      ],
+    },
+  },
 };
-// get line chart canvas
-var buyers = document.getElementById("buyers").getContext("2d");
-// draw line chart
-new Chart(buyers).Line(buyerData);
+
+window.onload = function () {
+  var ctx = document.getElementById("lineChart").getContext("2d");
+  window.myLine = new Chart(ctx, config);
+};
+
+document.getElementById("randomizeData").addEventListener("click", function () {
+  config.data.datasets.forEach(function (dataset) {
+    dataset.data = dataset.data.map(function () {
+      return randomScalingFactor();
+    });
+  });
+
+  window.myLine.update();
+});

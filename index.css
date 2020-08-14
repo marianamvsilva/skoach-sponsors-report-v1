@@ -5,8 +5,17 @@ body {
 
 .container {
   margin-top: 5% !important;
+  margin-bottom: 5% !important;
 }
 
+p {
+  font-weight: 400 !important;
+}
+
+.nps {
+  font-size: 30px;
+  font-weight: 0 !important;
+}
 h1 {
   font-size: 2.8rem !important;
   color: black;
@@ -14,12 +23,15 @@ h1 {
 }
 
 h2 {
-  font-size: 2.8rem !important;
-  color: #6255ee;
+  color: black;
+  font-size: 26px !important;
+  font-weight: 600 !important;
+  margin-bottom: 1% !important;
 }
 
 h3 {
   font-size: 22px !important;
+  margin-top: 0 !important;
 }
 
 h4 {
@@ -34,11 +46,48 @@ h4 {
 .column-logo {
   text-align: right;
 }
+
+.column-display-flex {
+  display: flex;
+}
+
+.select-control {
+  background-color: white;
+  border-color: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  max-width: 50%;
+}
+
+.select-control:active,
+.select-control:hover {
+  border-color: none;
+}
+
+.column-flex-end {
+  justify-content: flex-end;
+}
+
 .card {
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 8% 10%;
+  padding: 5% 7%;
+}
+
+.card-margin-top {
+  margin-top: 3%;
+}
+
+.card-nps {
+  padding: 6.5% 7%;
+}
+
+.column {
+  margin: auto;
+}
+
+.col-weekly {
+  margin-bottom: auto !important;
 }
 
 .wrapper {
@@ -54,9 +103,11 @@ h4 {
   flex-direction: row;
 }
 
-.column-nps {
+.column-no-margin {
   text-align: center;
   margin: auto !important;
+  display: flex !important;
+  align-items: flex-end !important;
 }
 
 .team-hover:hover {
