@@ -73,7 +73,7 @@ h4 {
   max-width: 50%;
   line-height: inherit;
 }
-.form-control:after {
+.selectdiv:after {
   color: red;
 }
 
@@ -208,4 +208,9 @@ h4 {
   padding: 60px 50px;
   background: #fff;
   border-radius: 4px;
+}
+
+/*I METRICS*/
+.metrics-i {
+  border: black;
 }

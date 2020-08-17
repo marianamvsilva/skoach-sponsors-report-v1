@@ -46,6 +46,16 @@
       integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
       crossorigin="anonymous"
     />
+    <link
+      href="/your-path-to-fontawesome/css/fontawesome.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+      integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -68,7 +78,7 @@
             <p>24 Total Active Users</p>
           </div>
           <!-- SELECT OPTION STARTS HERE -->
-          <div class="column column-no-margin column-flex-end">
+          <div class="column column-no-margin column-flex-end selectdiv">
             <select class="form-control" id="teamField">
               <option value="All Teams">All Teams</option>
               <option value="Marketing">Marketing</option>
@@ -85,34 +95,43 @@
           <div class="column column-25 responsive">
             <div class="card card-flex">
               <div class="card-title">
-                <h4>Cumulative Completion Rate</h4>
+                <h4>Average % of who completes the challenges</h4>
               </div>
               <div
                 class="chart donut-auto"
                 data-size="75"
                 data-value="75"
               ></div>
+              <span style="font-size: 16px; color: #606c76;">
+                <i class="fas fa-info-circle"></i>
+              </span>
             </div>
 
             <div class="card card-flex">
               <div class="card-title">
-                <h4>Weekly <br />Active <br />Users</h4>
+                <h4>Weekly Active Users / Total</h4>
               </div>
               <div
                 class="chart donut-auto"
                 data-size="75"
                 data-value="93"
               ></div>
+              <span style="font-size: 16px; color: #606c76;">
+                <i class="fas fa-info-circle"></i>
+              </span>
             </div>
-            <div class="card card-flex">
+            <div class="card card-flex" style="margin: auto;">
               <div class="card-title">
-                <h4>Average <br />Challenge <br />"NPS"</h4>
+                <h4>Average Challenge "NPS"</h4>
               </div>
               <div class="nps-score-align">
                 <p class="nps-score-size">4</p>
                 <br />
                 <p style="align-self: flex-end;">/ 5</p>
               </div>
+              <span style="font-size: 16px; color: #606c76;">
+                <i class="fas fa-info-circle"></i>
+              </span>
             </div>
           </div>
           <div class="column column-chart">
