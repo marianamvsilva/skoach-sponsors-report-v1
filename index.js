@@ -237,7 +237,8 @@ var myChart = new Chart(ctx, {
     ],
     datasets: [
       {
-        label: "",
+        label: "All teams",
+        labelColor: "#49adb2",
         data: [90, 100, 90, 80, 70, 80, 90, 90],
         borderColor: "#1d5470",
         borderWidth: 2,
@@ -254,8 +255,6 @@ var myChart = new Chart(ctx, {
   },
   options: {
     responsive: true,
-    maintainAspectRatio: true,
-    aspectRatio: 5,
     legend: {
       labels: {
         // This more specific font property overrides the global property
@@ -276,6 +275,10 @@ var myChart = new Chart(ctx, {
             callback: function (value) {
               return ((value / this.max) * 100).toFixed(0) + "%";
             },
+          },
+          pointLabels: {
+            fontFamily: "'Open Sans', sans-serif",
+            defaultFontSize: 50,
           },
         },
       ],
