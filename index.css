@@ -8,14 +8,17 @@ body {
   margin-bottom: 5% !important;
 }
 
-p {
-  font-weight: 400 !important;
-}
-
-.nps {
+/*NPS CARD*/
+.nps-score-size {
   font-size: 30px;
   font-weight: 0 !important;
 }
+
+.nps-score-align {
+  display: flex;
+  margin: auto;
+}
+
 h1 {
   font-size: 2.8rem !important;
   color: black;
@@ -23,21 +26,26 @@ h1 {
 }
 
 h2 {
-  color: black;
-  font-size: 26px !important;
-  font-weight: 600 !important;
-  margin-bottom: 1% !important;
+  color: #1d5470;
+  margin-bottom: 0 !important;
+  font-size: 2rem !important;
 }
 
 h3 {
-  font-size: 22px !important;
-  margin-top: 0 !important;
+  color: black;
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5% !important;
 }
 
 h4 {
-  color: #1d5470;
-  margin-bottom: 0 !important;
+  font-size: 1.75rem !important;
+  margin-top: 0 !important;
 }
+
+/*p {
+  font-weight: 400 !important;
+}*/
 
 .logo {
   max-width: 15%;
@@ -51,6 +59,7 @@ h4 {
   display: flex;
 }
 
+/*FORM CONTROL*/
 .form-control {
   background-color: white;
   border-color: snow;
@@ -85,6 +94,8 @@ h4 {
 
 .donut-auto {
   margin: auto;
+  padding: 0 auto;
+  text-align-last: center;
 }
 
 .card {
@@ -104,7 +115,11 @@ h4 {
   .row .column.responsive[class*=" column-"] {
     margin-left: 0;
     max-width: 100%;
+    margin-bottom: auto !important;
   }
+}
+.column.responsive {
+  margin-top: inherit;
 }
 
 .column-chart {

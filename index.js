@@ -21,7 +21,6 @@ Dial.prototype.create = function () {
   this.createSlice();
   this.createOverlay();
   this.createText();
-  this.createArrow();
   this.container.appendChild(this.svg);
 };
 
@@ -240,13 +239,32 @@ var myChart = new Chart(ctx, {
       {
         label: "",
         data: [90, 100, 90, 80, 70, 80, 90, 90],
-        backgroundColor: "#ffff00",
         borderColor: "#1d5470",
         borderWidth: 2,
+        fill: false,
+        backgroundColor: "transparent",
+        pointBorderColor: "#49adb2",
+        pointBackgroundColor: "#49adb2",
+        pointRadius: 5,
+        pointHoverRadius: 10,
+        pointHitRadius: 30,
+        pointBorderWidth: 2,
       },
     ],
   },
   options: {
+    responsive: true,
+    maintainAspectRatio: true,
+    aspectRatio: 5,
+    legend: {
+      labels: {
+        // This more specific font property overrides the global property
+        font: {
+          color: "#49adb2",
+          family: "'Open Sans', sans-serif",
+        },
+      },
+    },
     scales: {
       yAxes: [
         {
