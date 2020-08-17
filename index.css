@@ -73,14 +73,15 @@ h4 {
   max-width: 50%;
   line-height: inherit;
 }
-.selectdiv:after {
-  color: red;
-}
 
 .form-control:focus {
   border-color: snow;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+.form-controlafter:active:after {
+  color: red;
 }
 
 .column-flex-end {
@@ -99,6 +100,9 @@ h4 {
   }
   .column-logo {
     text-align: left;
+  }
+  .p-mobile {
+    font-size: 1.4rem;
   }
 }
 
@@ -133,6 +137,12 @@ h4 {
     margin-bottom: auto !important;
   }
 }
+
+/*FONTAWESOME*/
+.fa-info-circle:hover {
+  color: #1d5470;
+}
+
 .column.responsive {
   margin-top: inherit;
 }
@@ -214,3 +224,12 @@ h4 {
 .metrics-i {
   border: black;
 }
+
+/*#table-wrapper {
+  position: relative;
+}
+#table-scroll {
+  width: 600px;
+  overflow: auto;
+  margin-top: 20px;
+}*/

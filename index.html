@@ -137,7 +137,7 @@
           <div class="column column-chart">
             <div class="card">
               <h3>Overall Challenge Completion Rate</h3>
-              <p>Completed Challenges / Total Users</p>
+              <p class="p-mobile">Completed Challenges / Total Users</p>
               <canvas id="myChart" width="500" height="200"></canvas>
             </div>
           </div>
@@ -146,90 +146,95 @@
         <br />
         <div class="card card-margin-top">
           <h3>Challenge Completion Rate by Team</h3>
-          <p>Completed Challenges / Total Users by Team</p>
-          <table>
-            <thead>
-              <tr>
-                <th class="td-padding-left">Team</th>
-                <th>Jan 1</th>
-                <th>Jan 8</th>
-                <th>Jan 15</th>
-                <th>Jan 22</th>
-                <th>Jan 29</th>
-                <th>Feb 5</th>
-                <th>Feb 12</th>
-                <th>Feb 19</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="team-hover">
-                <td class="td-padding-left">All teams</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td class="td-padding-right">100%</td>
-              </tr>
-              <tr class="team-hover">
-                <td class="td-padding-left">Marketing</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td class="td-padding-right">100%</td>
-              </tr>
-              <tr class="team-hover">
-                <td class="td-padding-left">Engineering</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td class="td-padding-right">100%</td>
-              </tr>
-              <tr class="team-hover">
-                <td class="td-padding-left">Sales</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td class="td-padding-right">100%</td>
-              </tr>
-              <tr class="team-hover">
-                <td class="td-padding-left">Customer Success</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td class="td-padding-right">100%</td>
-              </tr>
-              <tr class="team-hover">
-                <td class="td-padding-left">Product</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td class="td-padding-right">100%</td>
-              </tr>
-            </tbody>
-          </table>
+          <p class="p-mobile">Completed Challenges / Total Users by Team</p>
+          <div id="table-wrapper">
+            <div id="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="td-padding-left">Team</th>
+                    <th>Jan 1</th>
+                    <th>Jan 8</th>
+                    <th>Jan 15</th>
+                    <th>Jan 22</th>
+                    <th>Jan 29</th>
+                    <th>Feb 5</th>
+                    <th>Feb 12</th>
+                    <th>Feb 19</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr class="team-hover">
+                    <td class="td-padding-left">All teams</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td class="td-padding-right">100%</td>
+                  </tr>
+                  <tr class="team-hover">
+                    <td class="td-padding-left">Marketing</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td class="td-padding-right">100%</td>
+                  </tr>
+                  <tr class="team-hover">
+                    <td class="td-padding-left">Engineering</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td class="td-padding-right">100%</td>
+                  </tr>
+                  <tr class="team-hover">
+                    <td class="td-padding-left">Sales</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td class="td-padding-right">100%</td>
+                  </tr>
+                  <tr class="team-hover">
+                    <td class="td-padding-left">Customer Success</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td class="td-padding-right">100%</td>
+                  </tr>
+                  <tr class="team-hover">
+                    <td class="td-padding-left">Product</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td class="td-padding-right">100%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>

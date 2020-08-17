@@ -257,17 +257,15 @@ var myChart = new Chart(ctx, {
     responsive: true,
     legend: {
       labels: {
-        // This more specific font property overrides the global property
-        font: {
-          color: "#49adb2",
-          family: "'Open Sans', sans-serif",
-        },
+        fontFamily: "'Open Sans', sans-serif",
       },
     },
     scales: {
       yAxes: [
         {
           ticks: {
+            fontFamily: "'Open Sans', sans-serif",
+            fontSize: "15",
             beginAtZero: true,
             stepSize: 20,
             min: 0,
@@ -276,9 +274,13 @@ var myChart = new Chart(ctx, {
               return ((value / this.max) * 100).toFixed(0) + "%";
             },
           },
-          pointLabels: {
+        },
+      ],
+      xAxes: [
+        {
+          ticks: {
             fontFamily: "'Open Sans', sans-serif",
-            defaultFontSize: 50,
+            fontSize: "15",
           },
         },
       ],
