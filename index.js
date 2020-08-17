@@ -222,3 +222,45 @@ dial2.animateStart();
 //
 // LINE CHART
 //
+var ctx = document.getElementById("myChart").getContext("2d");
+var myChart = new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: [
+      "Jan 1",
+      "Jan 8",
+      "Jan 15",
+      "Jan 22",
+      "Jan 29",
+      "Feb 5",
+      "Feb 12",
+      "Feb 19",
+    ],
+    datasets: [
+      {
+        label: "",
+        data: [90, 100, 90, 80, 70, 80, 90, 90],
+        backgroundColor: "#ffff00",
+        borderColor: "#1d5470",
+        borderWidth: 2,
+      },
+    ],
+  },
+  options: {
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+            stepSize: 20,
+            min: 0,
+            max: this.max,
+            callback: function (value) {
+              return ((value / this.max) * 100).toFixed(0) + "%";
+            },
+          },
+        },
+      ],
+    },
+  },
+});
