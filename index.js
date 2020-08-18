@@ -256,6 +256,7 @@ var myChart = new Chart(ctx, {
   options: {
     responsive: true,
     legend: {
+      display: false,
       labels: {
         fontFamily: "'Open Sans', sans-serif",
       },
