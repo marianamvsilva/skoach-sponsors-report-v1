@@ -14,6 +14,10 @@ body {
   }
 }
 
+.column {
+  margin: inherit !important;
+}
+
 /*NPS CARD*/
 .nps-score-size {
   font-size: 30px;
@@ -28,7 +32,8 @@ body {
 h1 {
   font-size: 2.8rem !important;
   color: black;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
+  font-family: "Nunito Sans", sans-serif !important;
 }
 
 h2 {
@@ -59,6 +64,7 @@ h4 {
 
 .column-logo {
   text-align: right;
+  margin: inherit !important;
 }
 
 .column-display-flex {
@@ -100,6 +106,7 @@ h4 {
   }
   .column-logo {
     text-align: left;
+    margin: inherit !important;
   }
   .p-mobile {
     font-size: 1.4rem;
