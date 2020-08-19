@@ -52,6 +52,7 @@ h3 {
 h4 {
   font-size: 1.75rem !important;
   margin-top: 0 !important;
+  font-weight: 400 !important;
 }
 
 /*p {
@@ -120,10 +121,7 @@ h4 {
   text-align-last: center;
 }
 
-.card-title {
-  width: 50%;
-}
-
+/*CARDS*/
 .card {
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -131,9 +129,30 @@ h4 {
   padding: 5% 7%;
 }
 
+.card-title {
+  width: 30%;
+  margin: auto;
+}
+
+.card-flex {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3%;
+  height: 130px;
+}
+
 @media only screen and (max-width: 768px) {
   .card {
     margin-top: 3%;
+    padding: 2% 4%;
+  }
+  .card-flex {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+  }
+  .h4 {
+    margin-bottom: 0 !important;
   }
 }
 
@@ -150,6 +169,15 @@ h4 {
   color: #1d5470;
 }
 
+.metrics-info {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .column.responsive {
   margin-top: inherit;
 }
@@ -162,22 +190,8 @@ h4 {
   margin-top: 3%;
 }
 
-.card-nps {
-  padding: 6.5% 7%;
-}
-
-.card-flex {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 3%;
-}
-
 .column {
   margin: auto;
-}
-
-.col-weekly {
-  margin-bottom: auto !important;
 }
 
 .wrapper {
@@ -240,3 +254,18 @@ h4 {
   overflow: auto;
   margin-top: 20px;
 }*/
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 0.3fr 0.7fr;
+  grid-gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-wrapper {
+    display: flow-root;
+  }
+  .column-wrapper {
+    display: flex;
+  }
+}

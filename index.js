@@ -1,3 +1,9 @@
+//CHANGE TEAM NAMES
+function changeTeam() {
+  const teamName = document.getElementById("team-field").value;
+  document.getElementById("team-select").innerHTML = teamName;
+}
+
 //Donut Chart
 var Dial = function (container) {
   this.container = container;
@@ -247,9 +253,9 @@ var myChart = new Chart(ctx, {
         pointBorderColor: "#49adb2",
         pointBackgroundColor: "#49adb2",
         pointRadius: 5,
-        pointHoverRadius: 10,
+        pointHoverRadius: 7,
         pointHitRadius: 30,
-        pointBorderWidth: 2,
+        pointBorderWidth: 1,
       },
     ],
   },
@@ -288,3 +294,6 @@ var myChart = new Chart(ctx, {
     },
   },
 });
+//
+// GAUGE CHART
+//

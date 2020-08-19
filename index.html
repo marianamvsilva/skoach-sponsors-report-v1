@@ -60,13 +60,14 @@
       integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
       crossorigin="anonymous"
     ></script>
+    <script src="dist/gauge.js"></script>
   </head>
 
   <body>
     <div class="header"></div>
     <div class="container">
       <div class="row row-column-reverse">
-        <div class="column">
+        <div class="column" style="padding-left: 2%;">
           <h2>Company name</h2>
           <h1>SPONSOR'S SKOACH REPORT</h1>
         </div>
@@ -76,14 +77,19 @@
       </div>
       <br />
       <div>
+        <h1 style="text-align: center;">Make Remote Work</h1>
         <div class="row row-column-reverse">
-          <div class="column">
-            <h3>ALL TEAMS</h3>
+          <div class="column" style="padding-left: 2.5%;">
+            <h3 id="team-select">All Teams</h3>
             <p>24 Total Active Users</p>
           </div>
           <!-- SELECT OPTION STARTS HERE -->
           <div class="column column-no-margin column-flex-end selectdiv">
-            <select class="form-control" id="teamField">
+            <select
+              class="form-control"
+              id="team-field"
+              onchange="changeTeam();"
+            >
               <option value="All Teams">All Teams</option>
               <option value="Marketing">Marketing</option>
               <option value="Engineering">Engineering</option>
@@ -94,9 +100,25 @@
           </div>
         </div>
         <!-- CARDS STARTS HERE -->
-        <!-- LINECHART STARTS HERE -->
-        <div class="row">
-          <div class="column column-25 responsive">
+        <div class="grid-wrapper">
+          <div class="column-wrapper">
+            <div class="card card-flex" style="position: relative;">
+              <div class="card-title">
+                <h4>Average Weekly Completion Rate</h4>
+              </div>
+              <div
+                class="chart donut-auto"
+                data-size="75"
+                data-value="75"
+              ></div>
+              <span style="font-size: 16px; color: #606c76;">
+                <i class="fas fa-info-circle"></i>
+              </span>
+              <span class="card metrics-info"
+                >Here goes the explanation for the average weekly completion
+                rate</span
+              >
+            </div>
             <div class="card card-flex">
               <div class="card-title">
                 <h4>Average Weekly Completion Rate</h4>
@@ -110,21 +132,7 @@
                 <i class="fas fa-info-circle"></i>
               </span>
             </div>
-
-            <div class="card card-flex" style="height: 120px;">
-              <div class="card-title">
-                <h4>Weekly Active Users / Total</h4>
-              </div>
-              <div
-                class="chart donut-auto"
-                data-size="75"
-                data-value="93"
-              ></div>
-              <span style="font-size: 16px; color: #606c76;">
-                <i class="fas fa-info-circle"></i>
-              </span>
-            </div>
-            <div class="card card-flex" style="margin: auto; height: 150px;">
+            <div class="card card-flex">
               <div class="card-title">
                 <h4>Average Challenge "NPS"</h4>
               </div>
@@ -138,7 +146,8 @@
               </span>
             </div>
           </div>
-          <div class="column column-chart">
+          <!-- LINECHART STARTS HERE -->
+          <div class="column-wrapper">
             <div class="card">
               <h3>Overall Challenge Completion Rate</h3>
               <p class="p-mobile">Completed Challenges / Total Users</p>
@@ -148,7 +157,7 @@
         </div>
         <!-- TABLE STARTS HERE -->
         <br />
-        <div class="card card-margin-top">
+        <div class="card card-margin-top" style="padding: 4% 7%;">
           <h3>Challenge Completion Rate by Team</h3>
           <p class="p-mobile">Completed Challenges / Total Users by Team</p>
           <div id="table-wrapper">
