@@ -12,12 +12,6 @@ var Dial = function (container) {
   this.radius = this.size / 2 - this.strokeWidth / 2;
   this.value = this.container.dataset.value;
   this.direction = this.container.dataset.arrow;
-  this.svg;
-  this.defs;
-  this.slice;
-  this.overlay;
-  this.text;
-  this.arrow;
   this.create();
 };
 
@@ -43,6 +37,7 @@ Dial.prototype.createDefs = function () {
     "http://www.w3.org/2000/svg",
     "linearGradient"
   );
+
   linearGradient.setAttribute("id", "gradient");
   var stop1 = document.createElementNS("http://www.w3.org/2000/svg", "stop");
   stop1.setAttribute("stop-color", "#1D5470");
@@ -65,6 +60,7 @@ Dial.prototype.createDefs = function () {
   stop2.setAttribute("stop-color", "rgba(0, 0, 0, 0.05)");
   stop2.setAttribute("offset", "100%");
   linearGradientBackground.appendChild(stop2);
+
   defs.appendChild(linearGradient);
   defs.appendChild(linearGradientBackground);
   this.svg.appendChild(defs);
@@ -87,6 +83,7 @@ Dial.prototype.createSlice = function () {
 
 Dial.prototype.createOverlay = function () {
   var r = this.size - this.size / 2 - this.strokeWidth / 2;
+
   var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
   circle.setAttribute("cx", this.size / 2);
   circle.setAttribute("cy", this.size / 2);
@@ -200,11 +197,15 @@ Dial.prototype.describeArc = function (x, y, radius, startAngle, endAngle) {
 
 Dial.prototype.setValue = function (value) {
   var c = (value / 100) * 360;
+
   if (c === 360) c = 359.99;
+
   var xy = this.size / 2 - this.strokeWidth / 2;
   var d = this.describeArc(xy, xy, xy, 180, 180 + c);
   this.slice.setAttribute("d", d);
+
   var tspanSize = this.size / 3.5 / 3;
+
   this.text.innerHTML =
     Math.floor(value) +
     '<tspan font-size="' +
@@ -239,7 +240,7 @@ var myChart = new Chart(ctx, {
       "Jan 29",
       "Feb 5",
       "Feb 12",
-      "Feb 19",
+      "Feb 19"
     ],
     datasets: [
       {
@@ -255,7 +256,7 @@ var myChart = new Chart(ctx, {
         pointRadius: 5,
         pointHoverRadius: 7,
         pointHitRadius: 30,
-        pointBorderWidth: 1,
+        pointBorderWidth: 1
       },
     ],
   },
@@ -298,17 +299,19 @@ var myChart = new Chart(ctx, {
             font: function (context) {
               var width = context.chart.width;
               var size = Math.round(width / 32);
+
               return {
                 size: size,
                 weight: 1000,
               };
-            },
-          },
-        },
-      ],
-    },
-  },
+            }
+          }
+        }
+      ]
+    }
+  }
 });
+
 //
 // GAUGE CHART
 //
@@ -319,10 +322,10 @@ function setGaugeValue(gauge, value) {
     return;
   }
 
-  gauge.querySelector(".gauge__fill").style.transform = `rotate(${
-    value / 2
-  }turn)`;
+  gauge.querySelector(".gauge__fill").style.transform =
+    `rotate(${value / 2}turn)`;
   gauge.querySelector(".gauge__cover").textContent = `${Math.round(value * 5)}`;
 }
 
-setGaugeValue(gaugeElement, 0.8);
+// Feed actual % fill here
+setGaugeValue(gaugeElement, 0.6);
