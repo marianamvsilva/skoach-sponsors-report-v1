@@ -55,6 +55,12 @@ h4 {
   font-weight: 400 !important;
 }
 
+@media only screen and (max-width: 768px) {
+  .program {
+    text-align: left !important;
+  }
+}
+
 /*p {
   font-weight: 400 !important;
 }*/
@@ -179,9 +185,9 @@ h4 {
   right: 0;
 }
 
-.card-flex:hover .metrics-info {
+/*.card-flex:hover .metrics-info {
   display: block;
-}
+}*/
 
 .column.responsive {
   margin-top: inherit;
@@ -189,14 +195,6 @@ h4 {
 
 .column-chart {
   margin-top: 0 !important;
-}
-
-.card-margin-top {
-  margin-top: 3%;
-}
-
-.column {
-  margin: auto;
 }
 
 .wrapper {
@@ -294,10 +292,9 @@ th {
 /*GAUGE*/
 .gauge {
   width: 100%;
-  max-width: 250px;
-  font-family: "Roboto", sans-serif;
-  font-size: 32px;
+  max-width: 50%;
   color: #004033;
+  font-size: 21.4286px;
 }
 
 .gauge__body {
@@ -317,7 +314,7 @@ th {
   left: 0;
   width: inherit;
   height: 100%;
-  background: #009578;
+  background: #1d5470;
   transform-origin: center top;
   transform: rotate(0.25turn);
   transition: transform 0.2s ease-out;
@@ -339,4 +336,9 @@ th {
   justify-content: center;
   padding-bottom: 25%;
   box-sizing: border-box;
+}
+
+select:focus:after {
+  border-color: red;
+  color: red;
 }

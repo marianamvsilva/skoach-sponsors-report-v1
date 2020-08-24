@@ -261,6 +261,7 @@ var myChart = new Chart(ctx, {
   },
   options: {
     responsive: true,
+    maintainAspectRatio: true,
     legend: {
       display: false,
       labels: {
@@ -307,9 +308,7 @@ function setGaugeValue(gauge, value) {
   gauge.querySelector(".gauge__fill").style.transform = `rotate(${
     value / 2
   }turn)`;
-  gauge.querySelector(".gauge__cover").textContent = `${Math.round(
-    value * 10
-  )}`;
+  gauge.querySelector(".gauge__cover").textContent = `${Math.round(value * 5)}`;
 }
 
-setGaugeValue(gaugeElement, 0.5);
+setGaugeValue(gaugeElement, 0.8);
