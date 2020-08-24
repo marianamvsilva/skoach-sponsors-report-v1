@@ -136,9 +136,12 @@
             <div class="card card-flex">
               <h4 class="card-title">Average Satisfaction Score</h4>
               <div class="gauge">
-                <div class="gauge__body">
+                <div class="gauge__body" style="position: relative;">
                   <div class="gauge__fill"></div>
                   <div class="gauge__cover"></div>
+                  <span class="gauge__bechmark" style="position: absolute;">
+                    / 5
+                  </span>
                 </div>
               </div>
               <span style="font-size: 16px; color: #606c76;">
@@ -152,7 +155,7 @@
           </div>
           <!-- LINECHART STARTS HERE -->
           <div class="column-wrapper">
-            <div class="card">
+            <div class="card" style="padding: 3% 5%;">
               <h3>Overall Challenge Completion Rate</h3>
               <p class="p-mobile">Completed Challenges / Total Users</p>
               <div class="chart-scroll" style="text-align: -webkit-center;">
@@ -168,7 +171,7 @@
         </div>
         <!-- TABLE STARTS HERE -->
         <br />
-        <div class="card card-margin-top" style="padding: 4% 7%;">
+        <div class="card card-margin-top" style="padding: 3% 5%;">
           <h3>Challenge Completion Rate by Team</h3>
           <p class="p-mobile">Completed Challenges / Total Users by Team</p>
           <div id="table-wrapper">
