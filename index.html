@@ -84,7 +84,7 @@
             <p>24 Total Active Users</p>
           </div>
           <!-- SELECT OPTION STARTS HERE -->
-          <div class="column column-no-margin column-flex-end selectdiv">
+          <div class="column form-no-margin column-flex-end selectdiv">
             <select
               class="form-control"
               id="team-field"
@@ -155,7 +155,14 @@
             <div class="card">
               <h3>Overall Challenge Completion Rate</h3>
               <p class="p-mobile">Completed Challenges / Total Users</p>
-              <canvas id="myChart" width="500" height="200"></canvas>
+              <div style="overflow-x: scroll;">
+                <div
+                  class="chart-container"
+                  style="position: relative; width: 600px;"
+                >
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -74,10 +74,6 @@ h4 {
   margin: inherit !important;
 }
 
-.column-display-flex {
-  display: flex;
-}
-
 /*FORM CONTROL*/
 .form-control {
   background-color: white;
@@ -120,6 +116,22 @@ h4 {
   }
 }
 
+/*CSS GRIDS*/
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 0.3fr 0.7fr;
+  grid-gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-wrapper {
+    display: flow-root;
+  }
+  .column-wrapper {
+    display: auto;
+  }
+}
+
 /*DONUT CHART*/
 .donut-auto {
   margin: auto;
@@ -136,8 +148,8 @@ h4 {
 }
 
 .card-title {
-  width: 30%;
-  margin: auto;
+  max-width: 30%;
+  margin: auto !important;
 }
 
 .card-flex {
@@ -171,7 +183,7 @@ h4 {
   }
 }
 
-/*FONTAWESOME*/
+/*I HOVER*/
 .fa-info-circle:hover {
   color: #1d5470;
 }
@@ -210,22 +222,11 @@ h4 {
   flex-direction: row;
 }
 
-.column-no-margin {
+.form-no-margin {
   text-align: center;
   margin: auto !important;
   display: flex !important;
   align-items: flex-end !important;
-}
-
-.td-padding-left {
-  padding-left: 3% !important;
-  text-align-last: left;
-}
-
-@media only screen and (max-width: 768px) {
-  .td-padding-left {
-    padding-left: 0 !important;
-  }
 }
 
 .wrapper-line {
@@ -265,6 +266,18 @@ th {
   border-radius: 8px;
 }
 
+.td-padding-left {
+  padding-left: 3% !important;
+  text-align-last: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .td-padding-left {
+    padding-left: 0 !important;
+  }
+}
+
+/*TABLE SCROLL*/
 /*#table-wrapper {
   position: relative;
 }
@@ -273,21 +286,6 @@ th {
   overflow: auto;
   margin-top: 20px;
 }*/
-
-.grid-wrapper {
-  display: grid;
-  grid-template-columns: 0.3fr 0.7fr;
-  grid-gap: 20px;
-}
-
-@media only screen and (max-width: 768px) {
-  .grid-wrapper {
-    display: flow-root;
-  }
-  .column-wrapper {
-    display: flex;
-  }
-}
 
 /*GAUGE*/
 .gauge {
@@ -336,9 +334,4 @@ th {
   justify-content: center;
   padding-bottom: 25%;
   box-sizing: border-box;
-}
-
-select:focus:after {
-  border-color: red;
-  color: red;
 }
