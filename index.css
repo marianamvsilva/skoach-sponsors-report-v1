@@ -61,10 +61,6 @@ h4 {
   }
 }
 
-/*p {
-  font-weight: 400 !important;
-}*/
-
 .logo {
   max-width: 15%;
 }
@@ -259,9 +255,13 @@ th {
   font-weight: 500;
 }
 
+/*td {
+  font-size: 15px;
+}*/
+
 @media only screen and (max-width: 768px) {
   th {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 }
 
@@ -295,10 +295,11 @@ th {
 
 /*GAUGE*/
 .gauge {
-  width: 100%;
+  width: 40%;
   max-width: 50%;
   color: #004033;
   font-size: 21.4286px;
+  margin: auto;
 }
 
 .gauge__body {
@@ -340,4 +341,10 @@ th {
   justify-content: center;
   padding-bottom: 25%;
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .gauge {
+    width: 30%;
+  }
 }
