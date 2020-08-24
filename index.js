@@ -240,7 +240,7 @@ var myChart = new Chart(ctx, {
       "Jan 29",
       "Feb 5",
       "Feb 12",
-      "Feb 19"
+      "Feb 19",
     ],
     datasets: [
       {
@@ -256,7 +256,7 @@ var myChart = new Chart(ctx, {
         pointRadius: 5,
         pointHoverRadius: 7,
         pointHitRadius: 30,
-        pointBorderWidth: 1
+        pointBorderWidth: 1,
       },
     ],
   },
@@ -279,7 +279,7 @@ var myChart = new Chart(ctx, {
               var size = Math.round(width / 32);
               return {
                 size: size,
-                weight: 600,
+                weight: 400,
               };
             },
             beginAtZero: true,
@@ -302,14 +302,14 @@ var myChart = new Chart(ctx, {
 
               return {
                 size: size,
-                weight: 1000,
+                weight: 400,
               };
-            }
-          }
-        }
-      ]
-    }
-  }
+            },
+          },
+        },
+      ],
+    },
+  },
 });
 
 //
@@ -322,8 +322,9 @@ function setGaugeValue(gauge, value) {
     return;
   }
 
-  gauge.querySelector(".gauge__fill").style.transform =
-    `rotate(${value / 2}turn)`;
+  gauge.querySelector(".gauge__fill").style.transform = `rotate(${
+    value / 2
+  }turn)`;
   gauge.querySelector(".gauge__cover").textContent = `${Math.round(value * 5)}`;
 }
 

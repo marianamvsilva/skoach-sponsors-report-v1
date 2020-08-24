@@ -186,11 +186,18 @@ h4 {
 
 .metrics-info {
   display: none;
+  padding: 10% 10%;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .metrics-info {
+    padding: 7% 10%;
+  }
 }
 
 .card-flex .info-icon:hover ~ .metrics-info,
@@ -236,11 +243,6 @@ h4 {
   border-radius: 4px;
 }
 
-/*I METRICS*/
-.metrics-i {
-  border: black;
-}
-
 /*TABLE*/
 
 table {
@@ -262,7 +264,11 @@ th {
 
 @media only screen and (max-width: 768px) {
   th {
-    font-size: 14px !important;
+    font-size: 12px !important;
+    padding: 1rem 0.5rem !important;
+  }
+  td {
+    font-size: 13px !important;
   }
 }
 
@@ -280,7 +286,7 @@ th {
 
 @media only screen and (max-width: 768px) {
   .td-padding-left {
-    padding-left: 0 !important;
+    padding-left: 2%;
   }
 }
 
