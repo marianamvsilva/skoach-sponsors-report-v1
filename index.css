@@ -156,19 +156,19 @@ h4 {
   display: flex;
   flex-direction: row;
   margin-bottom: 3%;
-  height: 130px;
+  height: 150px;
   position: relative;
 }
 
 @media only screen and (max-width: 768px) {
-  .card {
-    margin-top: 3%;
-    padding: 2% 4%;
-  }
   .card-flex {
     display: flex;
+    height: 100px;
     flex-direction: row;
     margin-bottom: 3%;
+  }
+  .card-title {
+    max-width: 50%;
   }
   .h4 {
     margin-bottom: 0 !important;
@@ -257,6 +257,12 @@ table {
 th {
   font-size: 16px;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  th {
+    font-size: 14px;
+  }
 }
 
 .team-hover:hover {
