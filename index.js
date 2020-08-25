@@ -274,14 +274,7 @@ var myChart = new Chart(ctx, {
         {
           ticks: {
             fontFamily: "'Open Sans', sans-serif",
-            font: function (context) {
-              var width = context.chart.width;
-              var size = Math.round(width / 32);
-              return {
-                fontSize: size,
-                fontWeight: 800,
-              };
-            },
+            fontSize: 14,
             beginAtZero: true,
             stepSize: 20,
             min: 0,
@@ -296,15 +289,8 @@ var myChart = new Chart(ctx, {
         {
           ticks: {
             fontFamily: "'Open Sans', sans-serif",
-            font: function (context) {
-              var width = context.chart.width;
-              var size = Math.round(width / 32);
-
-              return {
-                size: size,
-                fontWeight: 800,
-              };
-            },
+            fontSize: 14,
+            fontWeight: 500,
           },
         },
       ],
