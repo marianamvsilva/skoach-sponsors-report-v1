@@ -275,6 +275,8 @@ var myChart = new Chart(ctx, {
           ticks: {
             fontFamily: "'Open Sans', sans-serif",
             fontSize: 14,
+            fontWeight: 500,
+            fontColor: "#606c76",
             beginAtZero: true,
             stepSize: 20,
             min: 0,
@@ -291,6 +293,7 @@ var myChart = new Chart(ctx, {
             fontFamily: "'Open Sans', sans-serif",
             fontSize: 14,
             fontWeight: 500,
+            fontColor: "#606c76",
           },
         },
       ],
