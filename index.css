@@ -3,32 +3,12 @@ body {
   font-family: "Open Sans", sans-serif !important;
 }
 
-.container {
-  margin-top: 2% !important;
-  margin-bottom: 5% !important;
+#container {
+  margin-top: 2%;
+  margin-bottom: 5%;
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    margin-top: 5% !important;
-  }
-}
-
-.column {
-  margin: inherit !important;
-}
-
-/*NPS CARD*/
-.nps-score-size {
-  font-size: 30px;
-  font-weight: 0 !important;
-}
-
-.nps-score-align {
-  display: flex;
-  margin: auto;
-}
-
+/*TYPOGRAPHY*/
 h1 {
   font-size: 2.8rem !important;
   color: black;
@@ -55,19 +35,14 @@ h4 {
   font-weight: 400 !important;
 }
 
-@media only screen and (max-width: 768px) {
-  .program {
-    text-align: left !important;
-  }
-}
-
+/*LOGO*/
 .logo {
   max-width: 12%;
 }
 
-.column-logo {
+#column-logo {
   text-align: right;
-  margin: inherit !important;
+  margin: inherit;
 }
 
 /*FORM CONTROL*/
@@ -89,27 +64,15 @@ h4 {
   color: red;
 }
 
-.column-flex-end {
+.form-column {
   justify-content: flex-end;
 }
 
-@media only screen and (max-width: 768px) {
-  .column-flex-end {
-    justify-content: flex-start;
-  }
-  .row-column-reverse {
-    flex-direction: column-reverse !important;
-  }
-  .form-control {
-    max-width: 60%;
-  }
-  .column-logo {
-    text-align: left;
-    margin: inherit !important;
-  }
-  .p-mobile {
-    font-size: 1.4rem;
-  }
+#form-margin {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
 }
 
 /*CSS GRIDS*/
@@ -117,15 +80,6 @@ h4 {
   display: grid;
   grid-template-columns: 0.3fr 0.7fr;
   grid-gap: 20px;
-}
-
-@media only screen and (max-width: 768px) {
-  .grid-wrapper {
-    display: flow-root;
-  }
-  .column-wrapper {
-    display: auto;
-  }
 }
 
 /*DONUT CHART*/
@@ -156,30 +110,7 @@ h4 {
   position: relative;
 }
 
-@media only screen and (max-width: 768px) {
-  .card-flex {
-    display: flex;
-    height: 100px;
-    flex-direction: row;
-    margin-bottom: 3%;
-  }
-  .card-title {
-    max-width: 50%;
-  }
-  .h4 {
-    margin-bottom: 0 !important;
-  }
-}
-
-@media (max-width: 40rem) {
-  .row .column.responsive[class*=" column-"] {
-    margin-left: 0;
-    max-width: 100%;
-    margin-bottom: auto !important;
-  }
-}
-
-/*I HOVER*/
+/*METRICS INFO HOVER*/
 .fa-info-circle:hover {
   color: #1d5470;
 }
@@ -192,12 +123,6 @@ h4 {
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-@media only screen and (max-width: 768px) {
-  .metrics-info {
-    padding: 7% 10%;
-  }
 }
 
 .card-flex .info-icon:hover ~ .metrics-info,
@@ -213,46 +138,13 @@ h4 {
   margin-top: 0 !important;
 }
 
-.wrapper {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-}
-
-.form-no-margin {
-  text-align: center;
-  margin: auto !important;
-  display: flex !important;
-  align-items: flex-end !important;
-}
-
-.wrapper-line {
-  width: 60%;
-  display: block;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 60px 50px;
-  background: #fff;
-  border-radius: 4px;
-}
-
 /*TABLE*/
-
-table {
-  text-align-last: center !important;
+#table {
+  text-align-last: center;
 }
-
 .today {
   background-color: #ebeeee;
 }
-
 th {
   font-size: 16px;
   font-weight: 500;
@@ -262,16 +154,6 @@ th {
   font-size: 15px;
 }*/
 
-@media only screen and (max-width: 768px) {
-  th {
-    font-size: 12px !important;
-    padding: 1rem 0.5rem !important;
-  }
-  td {
-    font-size: 13px !important;
-  }
-}
-
 .team-hover:hover {
   background-color: #49adb2 !important;
   color: white;
@@ -279,15 +161,9 @@ th {
   border-radius: 8px;
 }
 
-.td-padding-left {
-  padding-left: 3% !important;
+#td-padding-left {
+  padding-left: 3%;
   text-align-last: left;
-}
-
-@media only screen and (max-width: 768px) {
-  .td-padding-left {
-    padding-left: 2%;
-  }
 }
 
 /*TABLE SCROLL*/
@@ -354,6 +230,70 @@ th {
   top: 10;
   bottom: 0;
   right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #container {
+    margin-top: 5%;
+  }
+  #column-logo {
+    text-align: left;
+    margin: inherit !important;
+  }
+  #program {
+    text-align: left !important;
+  }
+  .form-column {
+    justify-content: flex-start;
+  }
+  .row-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+  .form-control {
+    max-width: 60%;
+  }
+  .p-mobile {
+    font-size: 1.4rem;
+  }
+  .grid-wrapper {
+    display: flow-root;
+  }
+  .column-wrapper {
+    display: auto;
+  }
+  .card-flex {
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    margin-bottom: 3%;
+  }
+  .card-title {
+    max-width: 50%;
+  }
+  .h4 {
+    margin-bottom: 0;
+  }
+  .metrics-info {
+    padding: 7% 10%;
+  }
+  th {
+    font-size: 12px !important;
+    padding: 1rem 0.5rem !important;
+  }
+  td {
+    font-size: 13px !important;
+  }
+  .td-padding-left {
+    padding-left: 2%;
+  }
+}
+
+@media (max-width: 40rem) {
+  .row .column.responsive[class*=" column-"] {
+    margin-left: 0;
+    max-width: 100%;
+    margin-bottom: auto !important;
+  }
 }
 
 @media only screen and (max-width: 985px) {

@@ -38,13 +38,13 @@
   <body>
     <div class="header"></div>
 
-    <div class="container">
+    <div class="container" id="container">
       <div class="row row-column-reverse">
         <div class="column" style="padding-left: 2%;">
           <h2>Company name</h2>
           <h1>SPONSOR'S SKOACH REPORT</h1>
         </div>
-        <div class="column column-logo">
+        <div class="column" id="column-logo">
           <img src="./skoach_logo_blue.png" alt="logo" class="logo" />
         </div>
       </div>
@@ -52,14 +52,14 @@
       <br />
 
       <div>
-        <h1 class="program" style="text-align: center;">Make Remote Work</h1>
+        <h1 id="program" style="text-align: center;">Make Remote Work</h1>
         <div class="row row-column-reverse">
           <div class="column" style="padding-left: 2.5%;">
             <h3 id="team-select">All Teams</h3>
             <p>24 Total Active Users</p>
           </div>
           <!-- SELECT OPTION STARTS HERE -->
-          <div class="column form-no-margin column-flex-end selectdiv">
+          <div class="column form-column selectdiv" id="form-margin">
             <select
               class="form-control"
               id="team-field"
@@ -160,10 +160,10 @@
           <p class="p-mobile">Completed Challenges / Total Users by Team</p>
           <div id="table-wrapper">
             <div id="table-scroll">
-              <table>
+              <table id="table">
                 <thead>
                   <tr>
-                    <th class="td-padding-left">Team</th>
+                    <th id="td-padding-left">Team</th>
                     <th>Jan 1</th>
                     <th>Jan 8</th>
                     <th>Jan 15</th>
@@ -177,7 +177,7 @@
 
                 <tbody>
                   <tr class="team-hover">
-                    <td class="td-padding-left">All teams</td>
+                    <td id="td-padding-left">All teams</td>
                     <td>100%</td>
                     <td>100%</td>
                     <td>100%</td>
@@ -188,7 +188,7 @@
                     <td class="td-padding-right">100%</td>
                   </tr>
                   <tr class="team-hover">
-                    <td class="td-padding-left">Marketing</td>
+                    <td id="td-padding-left">Marketing</td>
                     <td>100%</td>
                     <td>100%</td>
                     <td>100%</td>
@@ -199,7 +199,7 @@
                     <td class="td-padding-right">100%</td>
                   </tr>
                   <tr class="team-hover">
-                    <td class="td-padding-left">Engineering</td>
+                    <td id="td-padding-left">Engineering</td>
                     <td>100%</td>
                     <td>100%</td>
                     <td>100%</td>
@@ -210,7 +210,7 @@
                     <td class="td-padding-right">100%</td>
                   </tr>
                   <tr class="team-hover">
-                    <td class="td-padding-left">Sales</td>
+                    <td id="td-padding-left">Sales</td>
                     <td>100%</td>
                     <td>100%</td>
                     <td>100%</td>
@@ -221,7 +221,7 @@
                     <td class="td-padding-right">100%</td>
                   </tr>
                   <tr class="team-hover">
-                    <td class="td-padding-left">Customer Success</td>
+                    <td id="td-padding-left">Customer Success</td>
                     <td>100%</td>
                     <td>100%</td>
                     <td>100%</td>
@@ -232,7 +232,7 @@
                     <td class="td-padding-right">100%</td>
                   </tr>
                   <tr class="team-hover">
-                    <td class="td-padding-left">Product</td>
+                    <td id="td-padding-left">Product</td>
                     <td>100%</td>
                     <td>100%</td>
                     <td>100%</td>
