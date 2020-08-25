@@ -244,7 +244,7 @@ var myChart = new Chart(ctx, {
     ],
     datasets: [
       {
-        label: "All teams",
+        label: "All teams:",
         labelColor: "#49adb2",
         data: [90, 100, 90, 80, 70, 80, 90, 90],
         borderColor: "#1d5470",
@@ -278,8 +278,8 @@ var myChart = new Chart(ctx, {
               var width = context.chart.width;
               var size = Math.round(width / 32);
               return {
-                size: size,
-                weight: 400,
+                fontSize: size,
+                fontWeight: 800,
               };
             },
             beginAtZero: true,
@@ -302,7 +302,7 @@ var myChart = new Chart(ctx, {
 
               return {
                 size: size,
-                weight: 400,
+                fontWeight: 800,
               };
             },
           },

@@ -142,9 +142,11 @@ h4 {
 #table {
   text-align-last: center;
 }
-.today {
+
+/*.today {
   background-color: #ebeeee;
-}
+}*/
+
 th {
   font-size: 16px;
   font-weight: 500;
@@ -226,10 +228,11 @@ th {
   box-sizing: border-box;
 }
 
-.gauge__bechmark {
-  top: 10;
-  bottom: 0;
-  right: 0;
+.gauge__benchmark {
+  position: absolute;
+  top: 30px;
+  left: 45px;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 768px) {

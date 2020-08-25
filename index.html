@@ -79,16 +79,23 @@
         <div class="grid-wrapper">
           <div class="column-wrapper">
             <div class="card card-flex">
-              <h4 class="card-title">Average Weekly Completion Rate</h4>
-              <div
-                class="chart donut-auto"
-                data-size="75"
-                data-value="75"
-              ></div>
+              <div class="card-left">
+                <h4 class="card-title">Average Weekly Completion Rate</h4>
+              </div>
+              <div class="card-right">
+                <div
+                  class="chart donut-auto"
+                  data-size="75"
+                  data-value="75"
+                ></div>
 
-              <span class="info-icon" style="font-size: 16px; color: #606c76;">
-                <i class="fas fa-info-circle"></i>
-              </span>
+                <span
+                  class="info-icon"
+                  style="font-size: 16px; color: #606c76;"
+                >
+                  <i class="fas fa-info-circle"></i>
+                </span>
+              </div>
 
               <span class="card metrics-info"
                 >Here goes the explanation for the average weekly completion
@@ -117,14 +124,14 @@
 
             <div class="card card-flex">
               <h4 class="card-title">Average Satisfaction Score</h4>
-              <div class="gauge">
-                <div class="gauge__body" style="position: relative;">
+              <div class="gauge" style="position: relative;">
+                <div class="gauge__body">
                   <div class="gauge__fill"></div>
                   <div class="gauge__cover"></div>
-                  <span class="gauge__bechmark" style="position: absolute;">
-                    / 5
-                  </span>
                 </div>
+                <span class="gauge__benchmark">
+                  / 5
+                </span>
               </div>
 
               <span class="info-icon" style="font-size: 16px; color: #606c76;">
